@@ -4,6 +4,6 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [
     tailwindcss(),
-    base: '/cloud-engineer-portfolio/'
+    base, '/cloud-engineer-portfolio/'
   ],
 })
