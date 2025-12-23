@@ -44,10 +44,10 @@ export default function ProjectCard() {
           </div>
 
           <div className="flex flex-col gap-3 pt-4 border-t border-slate-100">
-            <a href="" className="text-blue-600 font-bold flex items-center gap-2 hover:translate-x-1 transition-transform uppercase text-sm">
+            <a href="https://github.com/Seven-99/Portfolio-cloud-engineer.git" className="text-blue-600 font-bold flex items-center gap-2 hover:translate-x-1 transition-transform uppercase text-sm">
               Repository →
             </a>
-            <a href="#" className="text-blue-600 font-bold flex items-center gap-2 hover:translate-x-1 transition-transform uppercase text-sm">
+            <a href="https://github.com/Seven-99/Portfolio-cloud-engineer/blob/main/README.md" className="text-blue-600 font-bold flex items-center gap-2 hover:translate-x-1 transition-transform uppercase text-sm">
               Technical Documentation →
             </a>
           </div>
