@@ -35,7 +35,7 @@ export default function ProjectCard() {
           <div className="space-y-4">
             <h4 className="font-bold text-slate-800 text-lg uppercase tracking-tight">Specs</h4>
             <ul className="space-y-3">
-              {["Infrastructure as Code: Resource Management through Terraform to secure consistency and avoid manual errors", "CI/CD Pipeline: Total deploy automatization through GitHub Actions.", "Cloud Storage Optimization: High availability hosting in CGS with stricted IAM policy access"].map(spec => (
+              {["Infrastructure as Code: Resource Management through Terraform to secure consistency and avoid manual errors", "CI/CD Pipeline: Total deploy automatization through GitHub Actions.", "Cloud Storage Optimization: High availability hosting in CGS with stricted IAM policy access", "Operations & Observability: Implemented Google Cloud Monitoring and Error Reporting with automated alerting policies for real-time incident detection and rapid debugging.", "Real-time Observability: Global monitoring dashboard tracking request latency and 99.9% uptime via GCP Monitoring."].map(spec => (
                 <li key={spec} className="flex items-start gap-2 text-slate-600">
                   <span className="text-blue-500 mt-1">▹</span> {spec}
                 </li>

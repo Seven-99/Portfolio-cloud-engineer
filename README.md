@@ -81,6 +81,20 @@ This section document the technical challenges surpassed during the deploy, demo
 
         --Resolution: Corrected the location parameter in the main.tf to match the existinf infraestructure's region. This shifted the execution plan from a destructive replacement to a safe "Update in-place", ensuring zero downtime and data preservation.
 
+-Incident Management and Debugging 
+    
+    --Error reporting: Integrated GCP Error Reporting to centralyze and analyze application crashes or API failures.
+
+    --Real-time Notification: Configured a dedicated Notification channel via email to receive instant alerts or uptime failures and critical system errors.  
+
+    --Automated Diagnosis: The setup allows for rapid troubleshooting by providing stack traces and error frequency directly in the monitoring dashboard.
+
+-Infrastructure Observability
+    
+    --Global Latency Tracking: Real-time line charts agreggating `request_latency` by `checker_location`.
+    
+    --Uptime Assurance: Automated checks from global nodes to validate a `200 OK` response status.
+
 -Key Skills Demonstrated
     --Google Cloud IAM: key management of Service Account and Github Secrets for a secure deploy.
     --Debugging: Use of the Chrome DevTools and execution logs of github to diagnose failures in real time.
