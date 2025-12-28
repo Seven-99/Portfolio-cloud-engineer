@@ -17,28 +17,63 @@ This section document the technical challenges surpassed during the deploy, demo
 1. Infraestructure and Cloud CLI
 -Incorrect Web Configuration
     --Issue: Failed to configure the bucket as a static website.
+
     --Root Cause: Missing double hyphens (--) in the web-main-page-suffix argument.
-    --Resolution: Corrected the command to: gcloud storage buckets update gs://[BUCKET_NAME] --web-main-page-suffix=index.html.
+
+    --Resolution: Corrected the command to: gcloud storage buckets update gs://[BUCKET_NAME] 
+    --web-main-page-suffix=index.html.
 
 -Access Denied (403 forbidden)
     --Issue: Website was inaccessible (403 error).
+    
     --Resolution: Assigned the Storage Object Viewer role to allUsers to enable public read access.
 
 2. Frontend & and Build Optimization
 -Asset Path Mismatch
     --Issue: Scripts and styles failed to load because the browser searched in the root directory instead of the bucket subfolder.
+
     --Resolution: Configured the base property in vite.config.js to use relative paths (./).
 
 -Vite Configuration Sintax
+
     --Issue: ReferenceError: base is not defined.
+
     --Root Cause: The base property was incorrectly placed inside the plugins array.
+
     --Resolution: Refactored vite.config.js to correctly structure the configuration object.
 
 -CI/CD Pipeline
     -Build Failure: The npm run build command failed due to inherited syntax errors in the configuration files.
     -Directory Context Error:
+
         --Issue: GitHub Actions couldn't find package.json.
+
         --Resolution: Set the working-directory: ./react in the workflow YAML to ensure the pipeline runs in the correct folder.
+
+-Infraestructure as Code (Terraform) 
+1.    -Empty directory:
+
+        --Issue: terraform init failed stating the directory was empty.
+
+        --Cause: The command was executed outside the folder containing the .tf configuration files.
+
+        --Resolutiom: Navigated to the correct subfolder (./terraform) before re-initializing.
+
+2.    -Error 400: User project specified in the request is invalid.
+
+        --Issue: Terrafor failed to refresh the state or import the bucket, resulting in a 400 Bad Request error from the Google API.
+
+        --Cause: The Terraform session lacked the necessary project context. The API could not associate the request with a valid billing or quota project because the GOOGLE_CLOUD_PROJECT environment variable was missing.
+
+        --Resolution: Manually exported the project ID using export GOOGLE_CLOUD_PROJECT=portfolio-479324 and set the default project in the CLI. This allowed the Terraform import and Terraform plan commands to execute successfully.
+
+3.    -State drift and Replacement:
+
+        --Issue: Terraform suggested destroying and recreating the bucket during the first plan.
+
+        --Root Cause: A mismatch between the manually created bucket's location and the LOCATION defined in the .tf configuration. Changing the US region to US-EAST1.
+
+        --Resolution: Attributes in cloud providers (like bucket locations) require precise alignment in the Iac state to avoid accidental resource destruction. 
 
 -Key Skills Demonstrated
     -Google Cloud IAM: key management of Service Account and Github Secrets for a secure deploy.

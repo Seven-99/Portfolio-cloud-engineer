@@ -1,6 +1,6 @@
 resource "google_storage_bucket" "portfolio" {
     name = "cloud-engineer-portfolio"
-    location = "US"
+    location = "US-EAST1"
     force_destroy = true
 
     website {
