@@ -57,7 +57,7 @@ This section document the technical challenges surpassed during the deploy, demo
 
         --Cause: The command was executed outside the folder containing the .tf configuration files.
 
-        --Resolutiom: Navigated to the correct subfolder (./terraform) before re-initializing.
+        --Resolution: Navigated to the correct subfolder (./terraform) before re-initializing.
 
 2.    -Error 400: User project specified in the request is invalid.
 
@@ -82,10 +82,10 @@ This section document the technical challenges surpassed during the deploy, demo
         --Resolution: Corrected the location parameter in the main.tf to match the existinf infraestructure's region. This shifted the execution plan from a destructive replacement to a safe "Update in-place", ensuring zero downtime and data preservation.
 
 -Key Skills Demonstrated
-    -Google Cloud IAM: key management of Service Account and Github Secrets for a secure deploy.
-    -Debugging: Use of the Chrome DevTools and execution logs of github to diagnose failures in real time.
-    -Cloud Networking: Static DNS configuration and public access to the buckets. 
+    --Google Cloud IAM: key management of Service Account and Github Secrets for a secure deploy.
+    --Debugging: Use of the Chrome DevTools and execution logs of github to diagnose failures in real time.
+    --Cloud Networking: Static DNS configuration and public access to the buckets. 
 
 -Security Note
-    -The Service Account Key is not inside the code, instead it was put it on the Github Secrets.
+    --The Service Account Key is not inside the code, instead it was put it on the Github Secrets.
 
