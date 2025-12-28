@@ -75,6 +75,12 @@ This section document the technical challenges surpassed during the deploy, demo
 
         --Resolution: Attributes in cloud providers (like bucket locations) require precise alignment in the Iac state to avoid accidental resource destruction. 
 
+4.  -Avoidance of Resource Destruction (Infraestructure Alignment)
+        
+        --Issue: initial Terraform plan indicated that the storage bucket would be destroyed and recreated due to a location mismatch (US  vs US-EAST1).
+
+        --Resolution: Corrected the location parameter in the main.tf to match the existinf infraestructure's region. This shifted the execution plan from a destructive replacement to a safe "Update in-place", ensuring zero downtime and data preservation.
+
 -Key Skills Demonstrated
     -Google Cloud IAM: key management of Service Account and Github Secrets for a secure deploy.
     -Debugging: Use of the Chrome DevTools and execution logs of github to diagnose failures in real time.
