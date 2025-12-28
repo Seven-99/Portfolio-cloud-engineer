@@ -23,7 +23,7 @@ export default function ProjectCard() {
 
         {/* Project Details */}
         <div className="space-y-6">
-          <h2 className="text-3xl font-bold text-slate-900">Static Web Hosting Automation</h2>
+          <h2 className="text-3xl font-bold text-slate-900">Cloud Infraestructure & Automation</h2>
           <div className="flex gap-2">
             {["Terraform", "GCP", "GitHub Actions"].map(tag => (
               <span key={tag} className="bg-blue-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase italic">
@@ -35,7 +35,7 @@ export default function ProjectCard() {
           <div className="space-y-4">
             <h4 className="font-bold text-slate-800 text-lg uppercase tracking-tight">Specs</h4>
             <ul className="space-y-3">
-              {["Configuración de Firewall Rules para tráfico HTTP/S", "Gestión de IAM Roles para Service Accounts"].map(spec => (
+              {["Infrastructure as Code: Resource Management through Terraform to secure consistency and avoid manual errors", "CI/CD Pipeline: Total deploy automatization through GitHub Actions.", "Cloud Storage Optimization: High availability hosting in CGS with stricted IAM policy access"].map(spec => (
                 <li key={spec} className="flex items-start gap-2 text-slate-600">
                   <span className="text-blue-500 mt-1">▹</span> {spec}
                 </li>
@@ -50,7 +50,7 @@ export default function ProjectCard() {
             <a href="https://github.com/Seven-99/Portfolio-cloud-engineer/blob/main/README.md" className="text-blue-600 font-bold flex items-center gap-2 hover:translate-x-1 transition-transform uppercase text-sm">
               Technical Documentation →
             </a>
-          </div>
+          </div>  
         </div>
       </div>
     </section>

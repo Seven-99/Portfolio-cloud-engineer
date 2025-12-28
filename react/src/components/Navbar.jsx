@@ -18,9 +18,9 @@ export default function Navbar() {
         </div>
         
         {/* Resumee button */}
-        <button className="bg-slate-900 text-white px-6 py-3 rounded-lg hover:bg-slate-700 transition-all shadow-md active:scale-95 font-semibold">
+        <a href="react\public\resume.pdf" download="react\public\resume.pdf" className="bg-slate-900 text-white px-6 py-3 rounded-lg hover:bg-slate-700 transition-all shadow-md active:scale-95 font-semibold">
           Resume PDF
-        </button>
+        </a>
       </div>
     </nav>
   );
