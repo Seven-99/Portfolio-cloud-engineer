@@ -13,8 +13,8 @@ export default function Navbar() {
         {/* Navegation Links with separation */}
         <div className="flex gap-6">
           <a href="#projects" className="hover:text-blue-600 transition-colors">Projects</a>
-          <a href="#skills" className="hover:text-blue-600 transition-colors">Skills</a>
-          <a href="#certifications" className="hover:text-blue-600 transition-colors">Certifications</a>
+          {/*<a href="#skills" className="hover:text-blue-600 transition-colors">Skills</a>
+          <a href="#certifications" className="hover:text-blue-600 transition-colors">Certifications</a>*/}
         </div>
         
         {/* Resumee button */}
