@@ -22,7 +22,7 @@ export const projectsData = [
       "Deployment: Automated rollout to Cloud Run.",
       "Artifact Registry: Secure container image management."
     ],
-    repo: "https://github.com/Seven-99/pupa-lab",
-    doc: "https://github.com/Seven-99/pupa-lab/blob/main/README.md"
+    repo: "https://github.com/Seven-99/PuppaLab.git",
+    doc: "https://github.com/Seven-99/PuppaLab/blob/main/README.md"
   }
 ];
