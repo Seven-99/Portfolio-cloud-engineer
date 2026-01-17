@@ -50,6 +50,12 @@ This section document the technical challenges surpassed during the deploy, demo
 
         --Resolution: Set the working-directory: ./react in the workflow YAML to ensure the pipeline runs in the correct folder.
 
+    Exit code 1:
+
+        --Issue: "Could not resolve "./data/projects" from "src/App.jsx"
+
+        --Resolution: Set the correct path for the projects.jsx component.
+
 -Infraestructure as Code (Terraform) 
 1.    -Empty directory:
 

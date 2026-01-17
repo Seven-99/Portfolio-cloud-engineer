@@ -4,7 +4,7 @@ import Hero from "./components/Hero";
 import SkillsGrid from "./components/SkillsGrid";
 import ProjectCard from "./components/ProjectCard";
 import FooterStats from "./components/FooterStats";
-import { projectsData } from "./data/projects"; 
+import { projectsData } from "./pages/Projects"; 
 
 export default function App() {
   return (
